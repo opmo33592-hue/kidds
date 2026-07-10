@@ -210,11 +210,6 @@
         .mobile-menu-btn:hover { border-color: var(--coral); color: var(--coral); }
         .mobile-menu-btn.active { background: var(--coral); color: white; border-color: var(--coral); }
 
-        /* ============ VIDEO SECTION ============ */
-        .video-section { background: var(--bg-secondary); padding: 80px 0; border-bottom: 2px solid var(--border); border-top: 2px solid var(--border); }
-        .video-wrapper { max-width: 1000px; margin: 0 auto; position: relative; border-radius: 32px; overflow: hidden; box-shadow: var(--shadow-hover); border: 5px solid var(--coral); animation: gentleFloat 5s ease-in-out infinite; background: #000; }
-        .video-wrapper video { width: 100%; display: block; border-radius: 27px; }
-
         /* ============ HERO ============ */
         .hero { padding: 100px 0 80px; position: relative; overflow: hidden; background: var(--gradient-hero); transition: background 0.5s ease; }
         .hero .container { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
@@ -236,6 +231,26 @@
         .hero-logo img { width: 100%; height: 100%; object-fit: contain; }
         .hero-floating-logo { border: 5px solid var(--coral); animation: gentleFloat 5s ease-in-out infinite; border-radius: 32px; box-shadow: 0 0 40px rgba(255,107,107,0.4); overflow: hidden; }
         .hero-floating-logo:hover { box-shadow: 0 0 60px rgba(255,107,107,0.6); border-color: var(--sun); }
+
+        /* ============ ABOUT SECTION ============ */
+        .about-section { padding: 80px 0; background: var(--bg-primary); position: relative; overflow: hidden; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-image { border-radius: 30px; overflow: hidden; box-shadow: var(--shadow-hover); border: 4px solid var(--sun); animation: gentleFloat 5s ease-in-out infinite; }
+        .about-image img { width: 100%; height: auto; object-fit: cover; }
+        .about-content h2 { font-size: clamp(32px, 4vw, 44px); margin-bottom: 20px; }
+        .about-content .section-line { margin: 0 0 24px 0; }
+        .about-content p { font-size: 17px; color: var(--text-secondary); line-height: 1.9; margin-bottom: 20px; }
+        .about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 30px; }
+        .feature-item { background: var(--bg-card); padding: 20px; border-radius: 16px; border: 1px solid var(--border); box-shadow: var(--shadow-card); transition: all 0.3s ease; }
+        .feature-item:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+        .feature-icon { font-size: 30px; margin-bottom: 8px; }
+        .feature-title { font-weight: 700; font-size: 16px; color: var(--text-primary); margin-bottom: 4px; }
+        .feature-desc { font-size: 13px; color: var(--text-secondary); }
+
+        /* ============ VIDEO SECTION ============ */
+        .video-section { background: var(--bg-secondary); padding: 80px 0; border-bottom: 2px solid var(--border); border-top: 2px solid var(--border); }
+        .video-wrapper { max-width: 1000px; margin: 0 auto; position: relative; border-radius: 32px; overflow: hidden; box-shadow: var(--shadow-hover); border: 5px solid var(--coral); animation: gentleFloat 5s ease-in-out infinite; background: #000; }
+        .video-wrapper video { width: 100%; display: block; border-radius: 27px; }
 
         /* ============ SECTIONS ============ */
         .section { padding: 100px 0; position: relative; }
@@ -274,7 +289,7 @@
         .book-card { background: var(--bg-card); border-radius: 28px; overflow: hidden; box-shadow: var(--shadow-card); transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); display: flex; flex-direction: column; border: 2px solid var(--border); animation: fadeInUp 0.5s ease backwards; }
         .book-card:hover { transform: translateY(-15px); box-shadow: var(--shadow-hover); background: var(--card-hover-bg); border-color: var(--sun); }
         .book-cover { width: 100%; aspect-ratio: 3/4; background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary)); display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; cursor: pointer; }
-        .book-cover img { width: 100%; height: 100%; object-fit: contain; transition: transform 0.6s ease; }
+        .book-cover img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
         .book-card:hover .book-cover img { transform: scale(1.15); }
         .book-cover-fallback { font-size: 72px; opacity: 0.5; }
         .book-category-badge { position: absolute; top: 16px; right: 16px; background: var(--bg-card); padding: 8px 16px; border-radius: 14px; font-size: 13px; font-weight: 700; color: var(--text-primary); box-shadow: 0 3px 15px rgba(0,0,0,0.15); z-index: 3; border: 1px solid var(--border); }
@@ -331,7 +346,7 @@
         .modal-close:hover { background: var(--coral-dark); transform: rotate(90deg); }
         .modal-header { display: flex; gap: 24px; margin-bottom: 28px; }
         .modal-cover { width: 140px; height: 180px; border-radius: 20px; overflow: hidden; background: var(--bg-secondary); flex-shrink: 0; box-shadow: var(--shadow-card); }
-        .modal-cover img { width: 100%; height: 100%; object-fit: contain; }
+        .modal-cover img { width: 100%; height: 100%; object-fit: cover; }
         .modal-title { font-family: 'Baloo 2', cursive; font-size: 28px; color: var(--text-primary); margin-bottom: 8px; }
         .modal-author { font-size: 17px; color: var(--text-secondary); margin-bottom: 14px; }
         .modal-category-badge { display: inline-block; padding: 8px 20px; background: var(--sun); color: var(--forest); border-radius: 14px; font-size: 14px; font-weight: 700; }
@@ -377,6 +392,8 @@
             .hero .container { grid-template-columns: 1fr; text-align: center; gap: 50px; }
             .hero-buttons { justify-content: center; }
             .hero-stats { justify-content: center; }
+            .about-grid { grid-template-columns: 1fr; }
+            .about-features { grid-template-columns: 1fr; }
             .section-title { font-size: 36px; }
             .stat-card { padding: 20px 24px; }
             .stat-number { font-size: 36px; }
@@ -431,6 +448,7 @@
                 <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
                 <div class="nav-links" id="navLinks">
                     <a href="#hero" class="nav-link">🏠 Home</a>
+                    <a href="#about" class="nav-link">ℹ️ About</a>
                     <a href="#video" class="nav-link">🎬 Video</a>
                     <a href="#books" class="nav-link">📚 Library</a>
                     <a href="#categories" class="nav-link">🏷️ Categories</a>
@@ -440,7 +458,7 @@
             </div>
         </nav>
 
-        <!-- HERO SECTION (First) -->
+        <!-- HERO SECTION -->
         <section class="hero" id="hero" aria-label="Hero">
             <div class="cloud cloud-1"></div><div class="cloud cloud-2"></div><div class="cloud cloud-3"></div>
             <span class="floating-decoration" style="top:10%;left:5%;">🌟</span>
@@ -457,7 +475,7 @@
                     <p>Browse a magical shelf of children's books, read what other kids thought, and bring a new favorite home!</p>
                     <div class="hero-buttons">
                         <a href="#books" class="btn btn-primary">📚 Browse Library</a>
-                        <a href="#video" class="btn btn-secondary">🎬 Watch Video</a>
+                        <a href="#about" class="btn btn-secondary">ℹ️ Learn More</a>
                     </div>
                     <div class="hero-stats">
                         <div class="stat-card"><div class="stat-number" id="statBooks">0</div><div class="stat-label">Books on Shelf</div></div>
@@ -470,18 +488,68 @@
             </div>
         </section>
 
-        <!-- VIDEO SECTION (After Hero) -->
+        <!-- ABOUT SECTION -->
+        <section class="about-section" id="about" aria-label="About our library">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="lo.png" alt="About CHILDREN HAVE A LIBRARY">
+                    </div>
+                    <div class="about-content">
+                        <div class="section-badge">About Us</div>
+                        <h2>Welcome to CHILDREN HAVE A LIBRARY</h2>
+                        <div class="section-line"></div>
+                        <p>
+                            We believe every child deserves access to wonderful stories that spark imagination, 
+                            build character, and create lifelong readers. Our digital library is carefully curated 
+                            to bring the best children's books from around the world right to your fingertips.
+                        </p>
+                        <p>
+                            Whether you're looking for magical fairy tales, exciting adventures, educational 
+                            non-fiction, or heartwarming moral stories, our collection has something special 
+                            for every young reader. Parents, teachers, and kids can explore, review, and share 
+                            their favorite books in a safe and friendly environment.
+                        </p>
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">📚</div>
+                                <div class="feature-title">Curated Collection</div>
+                                <div class="feature-desc">Handpicked quality books for children</div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">⭐</div>
+                                <div class="feature-title">Community Reviews</div>
+                                <div class="feature-desc">Real reviews from readers like you</div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">🔍</div>
+                                <div class="feature-title">Easy Discovery</div>
+                                <div class="feature-desc">Search by category, title, or author</div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">🌍</div>
+                                <div class="feature-title">Accessible Anywhere</div>
+                                <div class="feature-desc">Read and review on any device</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIDEO SECTION -->
         <section class="video-section" id="video" aria-label="Introduction video">
             <div class="container">
                 <div class="section-header">
                     <div class="section-badge">Watch</div>
                     <h2 class="section-title">Discover Our Library</h2>
                     <div class="section-line"></div>
-                    <p class="section-subtitle">Learn more about CHILDREN HAVE A LIBRARY and our magical collection</p>
+                    <p class="section-subtitle">Watch our video to learn more about CHILDREN HAVE A LIBRARY</p>
                 </div>
                 <div class="video-wrapper">
-                   
-                      <source src="children_have_a_library_explanatory_video_final.mp4" type="video/mp4">
+                    <video controls>
+                        <source src="children_have_a_library_explanatory_video_final.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
                     </video>
                 </div>
             </div>
@@ -539,7 +607,7 @@
         <div class="modal-box">
             <button class="modal-close" id="closeModal" aria-label="Close modal">✕</button>
             <div class="modal-header">
-                <div class="modal-cover"><img id="modalCover" src="" alt="Book cover"></div>
+                <div class="modal-cover"><img id="modalCover" src="" alt="Book cover" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"><div class="book-cover-fallback" style="display:none;width:100%;height:100%;align-items:center;justify-content:center;font-size:60px;">📖</div></div>
                 <div>
                     <h3 class="modal-title" id="modalTitle"></h3>
                     <p class="modal-author" id="modalAuthor"></p>
@@ -635,7 +703,7 @@
         function updateFilterBadge() { const c = document.getElementById('activeFilterContainer'); if (!c) return; if (activeFilter) { const cat = categories.find(x => x.name === activeFilter); c.innerHTML = `<div class="active-filter-badge" onclick="clearFilter()" role="button" tabindex="0"><span>${cat ? cat.emoji : ''} ${activeFilter}</span><span>×</span></div>`; } else { c.innerHTML = ''; } }
         function clearFilter() { activeFilter = null; document.getElementById('searchInput').value = ''; renderBooks(allBooks); updateFilterBadge(); renderCategories(); updateClearSearchVisibility(); }
 
-        function loadBooks() { const bg = document.getElementById('booksGrid'); if (bg) bg.innerHTML = '<div class="loading-state"><div class="loading-spinner"></div><p style="font-size:18px;font-weight:600;">Loading magical stories...</p></div>'; try { db.collection('kids_books').orderBy('createdAt', 'desc').onSnapshot(snap => { allBooks = []; snap.forEach(doc => { const d = doc.data(); allBooks.push({ id: doc.id, title: d.title || 'Untitled', author: d.author || 'Unknown', category: d.category || '', isbn: d.isbn || d.asin || '', amazonLink: d.amazonLink || '', imageUrl: d.imageUrl || '', avgRating: d.avgRating || 0 }); }); document.getElementById('statBooks').textContent = allBooks.length; if (activeFilter) { renderBooks(allBooks.filter(b => b.category === activeFilter)); } else { renderBooks(allBooks); } renderCategories(); countReviews(); loadAllReviewPreviews(); }, error => { console.error('Error:', error); if (bg) bg.innerHTML = '<div class="empty-state"><div style="font-size:60px;">😢</div><p>Could not load books.</p><button class="btn btn-primary" onclick="loadBooks()">Retry</button></div>'; }); } catch(e) { console.error('Firebase error:', e); } }
+        function loadBooks() { const bg = document.getElementById('booksGrid'); if (bg) bg.innerHTML = '<div class="loading-state"><div class="loading-spinner"></div><p style="font-size:18px;font-weight:600;">Loading magical stories...</p></div>'; try { db.collection('kids_books').orderBy('createdAt', 'desc').onSnapshot(snap => { allBooks = []; snap.forEach(doc => { const d = doc.data(); console.log('📖 Book data:', d); // Debug log allBooks.push({ id: doc.id, title: d.title || 'Untitled', author: d.author || 'Unknown', category: d.category || '', isbn: d.isbn || d.asin || '', amazonLink: d.amazonLink || '', imageUrl: d.imageUrl || d.coverImage || d.image || '', avgRating: d.avgRating || 0 }); }); document.getElementById('statBooks').textContent = allBooks.length; if (activeFilter) { renderBooks(allBooks.filter(b => b.category === activeFilter)); } else { renderBooks(allBooks); } renderCategories(); countReviews(); loadAllReviewPreviews(); }, error => { console.error('Error:', error); if (bg) bg.innerHTML = '<div class="empty-state"><div style="font-size:60px;">😢</div><p>Could not load books.</p><button class="btn btn-primary" onclick="loadBooks()">Retry</button></div>'; }); } catch(e) { console.error('Firebase error:', e); } }
         async function countReviews() { let t = 0; for (const b of allBooks) { try { const snap = await db.collection('kids_books').doc(b.id).collection('reviews').get(); bookReviewCounts[b.id] = snap.size; t += snap.size; } catch(e) { bookReviewCounts[b.id] = 0; } } document.getElementById('statReviews').textContent = t; }
         async function loadAllReviewPreviews() { for (const book of allBooks) { try { const snap = await db.collection('kids_books').doc(book.id).collection('reviews').orderBy('createdAt', 'desc').limit(1).get(); if (!snap.empty) { const reviewData = snap.docs[0].data(); bookLatestReviews[book.id] = reviewData.text || ''; } else { bookLatestReviews[book.id] = ''; } } catch(e) { bookLatestReviews[book.id] = ''; } } if (activeFilter) { renderBooks(allBooks.filter(b => b.category === activeFilter)); } else { renderBooks(allBooks); } }
 
@@ -650,7 +718,7 @@
         const modal = document.getElementById('bookModal');
         document.getElementById('closeModal').addEventListener('click', () => { modal.classList.remove('active'); document.body.style.overflow = ''; });
         modal.addEventListener('click', e => { if (e.target === modal) { modal.classList.remove('active'); document.body.style.overflow = ''; } });
-        function openModal(id) { currentBook = allBooks.find(b => b.id === id); if (!currentBook) return; document.getElementById('modalCover').src = currentBook.imageUrl || ''; document.getElementById('modalTitle').textContent = currentBook.title || ''; document.getElementById('modalAuthor').textContent = 'by ' + (currentBook.author || 'Unknown'); document.getElementById('modalCategoryBadge').textContent = currentBook.category || ''; document.getElementById('modalISBN').textContent = currentBook.isbn ? 'ISBN: ' + currentBook.isbn : ''; const amazonContainer = document.getElementById('modalAmazonContainer'); const amazonLink = currentBook.amazonLink || ''; if (amazonLink) { amazonContainer.innerHTML = `<a href="${amazonLink}" target="_blank" rel="noopener noreferrer" class="modal-amazon-btn">🛒 View on Amazon</a>`; } else { amazonContainer.innerHTML = ''; } selectedStars = 0; updateStarPicker(); document.getElementById('reviewText').value = ''; modal.classList.add('active'); document.body.style.overflow = 'hidden'; loadReviews(id); }
+        function openModal(id) { currentBook = allBooks.find(b => b.id === id); if (!currentBook) return; document.getElementById('modalCover').src = currentBook.imageUrl || ''; document.getElementById('modalCover').style.display = currentBook.imageUrl ? 'block' : 'none'; const fallback = document.getElementById('modalCover').nextElementSibling; if (fallback) fallback.style.display = currentBook.imageUrl ? 'none' : 'flex'; document.getElementById('modalTitle').textContent = currentBook.title || ''; document.getElementById('modalAuthor').textContent = 'by ' + (currentBook.author || 'Unknown'); document.getElementById('modalCategoryBadge').textContent = currentBook.category || ''; document.getElementById('modalISBN').textContent = currentBook.isbn ? 'ISBN: ' + currentBook.isbn : ''; const amazonContainer = document.getElementById('modalAmazonContainer'); const amazonLink = currentBook.amazonLink || ''; if (amazonLink) { amazonContainer.innerHTML = `<a href="${amazonLink}" target="_blank" rel="noopener noreferrer" class="modal-amazon-btn">🛒 View on Amazon</a>`; } else { amazonContainer.innerHTML = ''; } selectedStars = 0; updateStarPicker(); document.getElementById('reviewText').value = ''; modal.classList.add('active'); document.body.style.overflow = 'hidden'; loadReviews(id); }
 
         const starPicker = document.getElementById('starPicker');
         starPicker.querySelectorAll('.star-btn').forEach(b => { b.addEventListener('click', () => { selectedStars = parseInt(b.dataset.val); updateStarPicker(); }); });
